@@ -31,3 +31,10 @@ button:active {
 		rgba(0, 0, 0, 0.04) 100%
 	);
 }
+
+a {
+	color: #8360e3;
+	text-decoration: none;
+	font-size: 16px;
+	line-height: 24px;
+}

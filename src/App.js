@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ExampleCanvas from "./ExampleCanvas";
 import ModeRadioGroup from "./ModeRadioGroup";
+import SourceCodeLink from "./SourceCodeLink";
 import "./App.css";
 
 class App extends Component {
@@ -43,6 +44,7 @@ class App extends Component {
           onModalScreenOpen={this.handleModalScreenOpen.bind(this)}
           onModalScreenClose={this.handleModalScreenClose.bind(this)}
         />
+        <SourceCodeLink />
       </div>
     );
   }
