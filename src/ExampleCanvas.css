@@ -1,0 +1,86 @@
+.canvas {
+	display: flex;
+	flex: 1 1 auto;
+	position: relative;
+	margin-top: 0;
+
+	background: #ffffff;
+	border-radius: 8px;
+	border: 1px solid rgba(0, 0, 0, 0.08);
+
+	overflow: hidden;
+}
+
+.canvas .screen {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	padding: 24px;
+	box-sizing: border-box;
+
+	background: #ffffff;
+	border-radius: 8px;
+
+	color: rgba(0, 0, 0, 0.56);
+	text-align: center;
+}
+
+.canvas .screen p {
+	margin-bottom: 24px;
+}
+
+#animated-screen {
+	background: #8360e3;
+	background-image: linear-gradient(
+		135deg,
+		rgba(69, 75, 102, 1) 0%,
+		rgba(131, 96, 227, 1) 50%,
+		rgba(239, 122, 133, 1) 100%
+	);
+	color: rgba(255, 255, 255, 1);
+}
+
+#animated-screen [role="img"] {
+	display: block;
+	font-size: 96px;
+	line-height: 128px;
+	height: 128px;
+	color: rgba(0, 0, 0, 1);
+}
+
+/*  The 'enter' class is applied just before the screen is added to the DOM,
+so it should represent the position of our element just before
+it animates into view */
+.screen-enter {
+	transform: translateX(100%);
+}
+
+/*  The 'enter-active' class is applied just after the screen is added to the DOM,
+and should include the 'transition' property. This property tells the browser to
+animate our 'translateX' value, which is the horizontal position of our element.
+By also including the ending position after the element animates into view, we
+ensure the browser will animate the change.  */
+.screen-enter-active {
+	transform: translateX(0);
+	transition: transform 300ms ease-in-out;
+}
+
+/*  The 'exit' class is applied just before the screen is removed from the DOM,
+so it should represent the position of our element just before
+it animates out of view */
+.screen-exit {
+	transform: translateX(0);
+}
+
+/*  The 'exit-active' class is applied just as the screen is beginning its exit from the
+DOM, and should include the 'transition' property. By also including the ending position
+after the element animates out of view, we ensure the browser will animate the change.  */
+.screen-exit-active {
+	transform: translateX(100%);
+	transition: transform 300ms ease-in;
+}

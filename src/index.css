@@ -1,0 +1,33 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Lato", sans-serif;
+	font-size: 18px;
+	line-height: 32px;
+	color: rgba(0, 0, 0, 0.72);
+}
+
+button {
+	font-family: "Lato", sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	color: #ffffff;
+
+	height: 56px;
+	padding: 0 24px;
+	background: #8360e3;
+	border-radius: 28px;
+	border: 1px solid rgba(0, 0, 0, 0.24);
+
+	cursor: pointer;
+}
+
+button:focus,
+button:active {
+	outline: none;
+	background-image: linear-gradient(
+		135deg,
+		rgba(0, 0, 0, 0.04) 0%,
+		rgba(0, 0, 0, 0.04) 100%
+	);
+}
